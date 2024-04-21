@@ -8,7 +8,6 @@ form.addEventListener("submit", onSubmitForm)
 const localStorageKey = 'feedback-form-state';
 const dataLocalStorage = getLocalStorage(localStorageKey);
 
-
 const objFormData = {
     email: '',
     message: '',
