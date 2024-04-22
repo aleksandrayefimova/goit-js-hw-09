@@ -45,24 +45,10 @@ ul li {
   list-style: none;
 }
 
-.sl-image {
-  position: relative;
-  transition: all .250ms ease;
+ .simple-lightbox .sl-caption {
+  font-size: 1.5rem !important;
+  background-color: rgba(71, 71, 71, .7) !important;
 }
 
-.sl-additional-html {
-  position: absolute;
-  bottom: 0;
-  display: inline-block;
-  width: 100%;
-  opacity: 0;
-  background-color: rgba(71, 71, 71, .7);
-  color: white;
-  transition: all .250ms ease;
-}
 
-.sl-additional-html.show {
-  padding: 5px 7px;
-  opacity: 1;
-  transition: all .250ms ease;
-}
+
