@@ -17,7 +17,7 @@
 .gallery__item {
   position: relative;
   box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2),
-    0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px -1px rgba(0, 0, 0, 0.12);
+      0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px -1px rgba(0, 0, 0, 0.12);
 }
 
 .gallery__image:hover {
@@ -41,7 +41,28 @@
   cursor: zoom-in;
 }
 
-
 ul li {
   list-style: none;
+}
+
+.sl-image {
+  position: relative;
+  transition: all .250ms ease;
+}
+
+.sl-additional-html {
+  position: absolute;
+  bottom: 0;
+  display: inline-block;
+  width: 100%;
+  opacity: 0;
+  background-color: rgba(71, 71, 71, .7);
+  color: white;
+  transition: all .250ms ease;
+}
+
+.sl-additional-html.show {
+  padding: 5px 7px;
+  opacity: 1;
+  transition: all .250ms ease;
 }
