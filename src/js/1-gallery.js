@@ -36,5 +36,34 @@ function htmlTemplate({ preview, original, description }) {
 
 renderGallery(images);
 
-const lightbox = new SimpleLightbox('.gallery a', { captionDelay: 250 });
+const captionDelay = 250
+
+const lightbox = new SimpleLightbox('.gallery a', { 
+    captionDelay, 
+    captions: true,
+    captionPosition: "bottom",
+    captionData: "title",
+    additionalHtml: ` `,
+});
+
+function showCaption(event) {
+    const captionElement = document.querySelector('.sl-additional-html');
+    captionElement.textContent = event.target.firstElementChild.alt;
+
+    setTimeout(() => {
+        captionElement.classList.add('show');
+    }, captionDelay);
+}
+
+function hideCaption() {
+    const captionElement = document.querySelector('.sl-additional-html');
+    captionElement.classList.remove('show');
+}
+
+lightbox.on('shown.simplelightbox', showCaption);
+
+lightbox.on('changed.simplelightbox', function(event) {
+    hideCaption();
+    showCaption(event);
+});
 
